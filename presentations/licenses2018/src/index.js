@@ -48,8 +48,17 @@ const images = {
 const gifs = {
   developer: require('../assets/developer.gif'),
   team: require('../assets/team.gif'),
-  alone: require('../assets/alone.gif')
+  alone: require('../assets/alone.gif'),
+  speak: require('../assets/speak.gif'),
+  what: require('../assets/what.gif')
 };
+
+const samples = {
+  blabla: `
+  for (let lot in backlog.lots) {
+    alert('BLA BLA BLA BLA BLA');
+  }`
+}
 
 preloader(images);
 
@@ -81,17 +90,17 @@ export default class Presentation extends Component {
   render() {
     return (
       <Deck
-        transition={['zoom', 'slide']}
+        transition={['zoom']}
         theme={theme}
         transitionDuration={500}
       >
         <Slide bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
-            Papa, c'est quoi
+            C'est quoi un développeur ?
           </Heading>
-          <Heading size={2} fit caps lineHeight={1} textColor="white" margin="50px 0" bold>
-             un développeur ?
-          </Heading>
+          <Text fill caps lineHeight={1} textColor="white" margin="50px 0" bold>
+             Retour d'expérience
+          </Text>
           <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
             @ Licences 3 Informatique, Université de Caen 2018
           </Text>
@@ -104,12 +113,12 @@ export default class Presentation extends Component {
           </Appear>
           <Appear fid="2">
             <Text size={1} fit caps lineHeight={1} textColor="white" margin="50px 0" bold>
-              Lead Front End Developer @ Yousign
+              Lead Front End Developer
             </Text>
           </Appear>
           <Appear fid="3">
             <Text size={1} fit caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
-              Freelance @ Ma boite à moi
+              Auto entrepreneur
             </Text>
           </Appear>
         </Slide>
@@ -130,14 +139,7 @@ export default class Presentation extends Component {
             </Heading>
           </Appear>
         </Slide>
-        <Slide bgColor="red">
-          <Heading size={1} fit caps lineHeight={1} textColor="white" bold>
-            La vie après les cours.
-          </Heading>
-
-        </Slide>
         <Slide
-          transition={['slide']}
           bgImage={gifs.developer.replace('/', '')}
           bgDarken={0.1}
         >
@@ -148,7 +150,6 @@ export default class Presentation extends Component {
           </Appear>
         </Slide>
         <Slide
-          transition={['slide']}
           bgImage={gifs.alone.replace('/', '')}
           bgDarken={0.3}
         >
@@ -158,10 +159,107 @@ export default class Presentation extends Component {
             </Heading>
           </Appear>
         </Slide>
-        <Slide bgColor="secondary">
-         
+        <Slide bgColor="primary">
+          <Text fit lineHeight={1} textColor="white" caps bold>
+            Un Client c'est quelqu'un qui...
+          </Text>
+          <List textColor="white" bold caps>
+            <Appear fid="1">
+              <ListItem>ne sait pas dev.</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem  textColor="yellow">te paye.</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem>s'attend à un résultat.</ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem  textColor="yellow">a très peur que ça foire.</ListItem>
+            </Appear>
+          </List>
         </Slide>
+        <Slide bgColor="red">
+          <Text fit lineHeight={1} textColor="white" caps bold>
+            Un Chef de projet c'est quelqu'un qui...
+          </Text>
+          <List textColor="white" bold caps>
+            <Appear fid="1">
+              <ListItem>ne sait pas dev.</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem  textColor="yellow">te paye.</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem>s'attend à un résultat.</ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem  textColor="yellow">a très peur que ça foire.</ListItem>
+            </Appear>
+          </List>
+          <Appear fid="5">
+            <Text bold caps fit textColor="white" bold>Tu as une équipe.</Text>
+          </Appear>
+        </Slide>
+        <Slide
+          bgImage={gifs.team.replace('/', '')}
+          bgDarken={0.2}
+        >
+          <Appear fid="1">
+            <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
+              Tu as une équipe.
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide bgColor="red">
+          <Heading fit caps>
+            Lancement d'un projet
+          </Heading>
+        </Slide>
+        <Slide
+          bgImage={gifs.speak.replace('/', '')}/>
+        <Slide bgColor="primary">
+          <Heading fit caps>
+            Architecture
+          </Heading>
+        </Slide>
+        <Slide
+          bgImage={gifs.speak.replace('/', '')}/>
+        <Slide bgColor="secondary">
+          <Heading fit caps>
+            Développement du lot 1
+          </Heading>
+        </Slide>
+        <Slide
+          bgImage={gifs.speak.replace('/', '')}/>
+        <Slide bgColor="secondary">
+          <Heading fit caps>
+            Développement du lot 2
+          </Heading>
+        </Slide>
+        <Slide
+          bgImage={gifs.speak.replace('/', '')}/>
+        <Slide bgColor="secondary">
+          <Heading fit caps>
+            Développement du lot 3
+          </Heading>
+        </Slide>
+        <Slide
+          bgImage={gifs.speak.replace('/', '')}/>
       </Deck>
     );
   }
 }
+
+// Différence Client VS Chef de projet V
+
+// Architecture
+
+// L'argent, ça rend accroc
+
+// Pédagogie
+
+// Déroulement du projet
+
+// Finalité
+
+// Résumé
