@@ -13,22 +13,24 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        include: ['index.js', 'src', 'example/assets', 'example/src'].map(
-          name => path.resolve(__dirname, name)
-        ),
+        exclude: path.join(__dirname, 'node_modules'),
         loader: 'babel-loader'
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      },
-      {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=8192'
+        loader: 'style-loader!raw-loader'
       },
       {
         test: /\.svg$/,
         loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
+      },
+      {
+        test: /\.png$/,
+        loader: 'url-loader?mimetype=image/png'
+      },
+      {
+        test: /\.jpg$/,
+        loader: 'url-loader?mimetype=image/jpg'
       }
     ]
   }

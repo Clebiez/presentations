@@ -18,9 +18,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        include: ['index.js', 'src', 'example/assets', 'example/src'].map(
-          name => path.resolve(__dirname, name)
-        ),
+        exclude: path.join(__dirname, 'node_modules'),
         loader: 'babel-loader'
       },
       {
@@ -29,19 +27,20 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        include: path.join(__dirname, 'example/assets'),
         loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       },
       {
         test: /\.png$/,
-        include: path.join(__dirname, 'example/assets'),
         loader: 'url-loader?mimetype=image/png'
       },
       {
         test: /\.jpg$/,
-        include: path.join(__dirname, 'example/assets'),
         loader: 'url-loader?mimetype=image/jpg'
-      }
+      },
+      {
+        test: /\.gif$/,
+        loader: 'url-loader?mimetype=image/gif'
+      },
     ]
   }
 };
