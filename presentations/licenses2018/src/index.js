@@ -196,9 +196,6 @@ export default class Presentation extends Component {
               <ListItem  textColor="yellow">a très peur que ça foire.</ListItem>
             </Appear>
           </List>
-          <Appear fid="5">
-            <Text bold caps fit textColor="white" bold>Tu as une équipe.</Text>
-          </Appear>
         </Slide>
         <Slide
           bgImage={gifs.team.replace('/', '')}
@@ -221,6 +218,11 @@ export default class Presentation extends Component {
           <Heading fit caps>
             Architecture
           </Heading>
+          <Appear fid="1">
+            <Heading textColor="yellow" caps>
+              Star du projet
+            </Heading>
+          </Appear>
         </Slide>
         <Slide
           bgImage={gifs.speak.replace('/', '')}/>
