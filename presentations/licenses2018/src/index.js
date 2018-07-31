@@ -49,6 +49,8 @@ const gifs = {
   umlUseCase: require('../assets/umlUseCase.png'),
   logoYousign: require('../assets/logoYousign.png'),
   brainstorming: require('../assets/brainstorming.jpg'),
+  kanban: require('../assets/kanban.jpg'),
+  kanban2: require('../assets/kanban2.png'),
 };
 preloader(gifs);
 
@@ -96,11 +98,11 @@ export default class Presentation extends Component {
           </Text>
          </Slide>
         <Slide bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
+          <Heading size={1} fill caps lineHeight={1} textColor="orange" bold>
             Clément Le Biez
           </Heading>
           <Appear fid="1">
-            <Text size={1} fit caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
+            <Text size={1} fill caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
               Lead Front End Developer
             </Text>
           </Appear>
@@ -109,12 +111,32 @@ export default class Presentation extends Component {
           </Appear>
         </Slide>
         <Slide bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
-            Clément Le Biez
+          <Heading size={3} caps lineHeight={1} textColor="orange" bold>
+            Auto entrepreneur
           </Heading>
           <Appear fid="1">
-            <Text size={1} fit caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
-              Auto entrepreneur
+            <Text size={1} caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
+              Conférencier
+            </Text>
+          </Appear>
+          <Appear fid="1">
+            <Text size={1} fill caps lineHeight={1} textColor="white" margin="50px 0" bold>
+              Passionné d'entrepreunariat
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={3} caps lineHeight={1} textColor="orange" bold>
+            Auto entrepreneur
+          </Heading>
+          <Appear fid="1">
+            <Text size={1} caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
+              Conférencier
+            </Text>
+          </Appear>
+          <Appear fid="1">
+            <Text size={1} fill caps lineHeight={1} textColor="white" margin="50px 0" bold>
+              Passionné d'entrepreunariat
             </Text>
           </Appear>
         </Slide>
@@ -155,6 +177,18 @@ export default class Presentation extends Component {
             </Heading>
           </Appear>
         </Slide>
+        <Slide>
+          <Appear fid="1">
+            <Heading size={3} textColor="orange">
+              40% de Développement
+            </Heading>
+          </Appear>
+          <Appear fid="2">
+            <Heading size={3} textColor="white">
+              60% de Communication
+            </Heading>
+          </Appear>
+        </Slide>
         <Slide
           bgImage={gifs.team.replace('/', '')}
           bgDarken={0.2}
@@ -173,7 +207,7 @@ export default class Presentation extends Component {
           <Text textColor="white" caps bold fill margin="30px">Commerciaux</Text>
           <Text textColor="yellow" caps bold fill margin="30px">Support Tech</Text>
         </Slide>
-        <Slide bgColor="red">
+        <Slide bgColor="secondary">
           <Heading fit caps>
             Lancement d'un projet / d'une feature
           </Heading>
@@ -191,36 +225,36 @@ export default class Presentation extends Component {
         <Slide
           bgImage={gifs.developer.replace('/', '')}
         />
-        <Slide
-          bgImage={gifs.speak.replace('/', '')}/>
-        <Slide bgColor="yellow">
-          <Heading fit caps textColor="primary">
+        <Slide bgColor="primary">
+          <Heading fit caps textColor="white">
             Débriefing
           </Heading>
         </Slide>
-        <Slide bgColor="yellow">
-          <Heading size={3} textColor="primary" bold caps>
+        <Slide
+          bgImage={gifs.speak.replace('/', '')}/>
+        <Slide bgColor="primary">
+          <Heading size={3} textColor="orange" bold caps>
             Préparation Technique
           </Heading>
           <List>
             <Appear fid="1">
-              <ListItem textColor="red" bold caps>
+              <ListItem textColor="white" bold caps>
                   Comprendre le besoin
               </ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="primary" bold caps>
-                  Choisir une solution technique
+              <ListItem textColor="yellow" bold caps>
+                  Choisir la meilleure solution
               </ListItem>
             </Appear>
             <Appear fid="3">
-              <ListItem textColor="red" bold caps>
+              <ListItem textColor="white" bold caps>
                   Recherche & Développement
               </ListItem>
             </Appear>
           </List>
           <Appear fid="4">
-              <Heading textColor="secondary" fill bold caps>
+              <Heading size={4} textColor="orange" fill bold caps>
                   Anéantir les incertitudes
               </Heading>
             </Appear>
@@ -264,41 +298,47 @@ export default class Presentation extends Component {
           bgDarken="0.4"
         >
           <Appear fid="1">
-            <Heading textColor="white">
+            <Heading textColor="white" fit caps bold>
               Brainstorming
             </Heading>
           </Appear>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide bgColor="white">
+          <Image display="block" src={gifs.kanban.replace('/', '')} />
+        </Slide>
+        <Slide bgColor="white">
+          <Image display="block" src={gifs.kanban2.replace('/', '')} />
+        </Slide>
+        <Slide>
           <Heading size={3} textColor="white" bold caps>
-            Intérêt du Brainstorming
+            Intérêt du brainstorming
           </Heading>
           <List>
             <Appear fid="1">
               <ListItem textColor="yellow" bold caps>
-                  Tu
+                  Favoriser l'emergence de solutions
               </ListItem>
             </Appear>
             <Appear fid="2">
               <ListItem textColor="white" bold caps>
-                  As
+                  Pour choisir la meilleure d'entre elle
               </ListItem>
             </Appear>
             <Appear fid="3">
               <ListItem textColor="yellow" bold caps>
-                  UNE
+                  Prévoir les problèmes
               </ListItem>
             </Appear>
             <Appear fid="4">
               <ListItem textColor="white" bold caps>
-                  équipe !
+                  Être prêt pour le développement
               </ListItem>
             </Appear>
           </List>
         </Slide>
         <Slide>
           <Heading size={3} fit caps textColor="orange">
-            Qualité d'un bon développeur
+            Qualités d'un bon développeur
           </Heading>
           <List>
             <Appear fid="1">
