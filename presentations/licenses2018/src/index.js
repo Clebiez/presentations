@@ -96,18 +96,26 @@ export default class Presentation extends Component {
           </Text>
          </Slide>
         <Slide bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
+            Clément Le Biez
+          </Heading>
           <Appear fid="1">
-            <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
-              Clément Le Biez
-            </Heading>
-          </Appear>
-          <Appear fid="2">
             <Text size={1} fit caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
               Lead Front End Developer
             </Text>
           </Appear>
-          <Appear fid="3">
+          <Appear fid="2">
             <Image src={gifs.logoYousign.replace('/', '')} />
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
+            Clément Le Biez
+          </Heading>
+          <Appear fid="1">
+            <Text size={1} fit caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
+              Auto entrepreneur
+            </Text>
           </Appear>
         </Slide>
         <Slide bgColor="primary">
