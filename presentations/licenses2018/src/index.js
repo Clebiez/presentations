@@ -38,29 +38,19 @@ import Interactive from '../assets/interactive';
 
 require('normalize.css');
 
-const images = {
-  city: require('../assets/city.jpg'),
-  kat: require('../assets/kat.png'),
-  logo: require('../assets/formidable-logo.svg'),
-  markdown: require('../assets/markdown.png')
-};
-
 const gifs = {
   developer: require('../assets/developer.gif'),
   team: require('../assets/team.gif'),
   alone: require('../assets/alone.gif'),
   speak: require('../assets/speak.gif'),
-  what: require('../assets/what.gif')
+  what: require('../assets/what.gif'),
+  proto: require('../assets/proto.jpg'),
+  proto2: require('../assets/proto2.jpg'),
+  umlUseCase: require('../assets/umlUseCase.png'),
+  logoYousign: require('../assets/logoYousign.png'),
+  brainstorming: require('../assets/brainstorming.jpg'),
 };
-
-const samples = {
-  blabla: `
-  for (let lot in backlog.lots) {
-    alert('BLA BLA BLA BLA BLA');
-  }`
-}
-
-preloader(images);
+preloader(gifs);
 
 const theme = createTheme({
   primary: '#00695c',
@@ -98,13 +88,13 @@ export default class Presentation extends Component {
           <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
             C'est quoi un développeur ?
           </Heading>
-          <Text fill caps lineHeight={1} textColor="white" margin="50px 0" bold>
-             Retour d'expérience
-          </Text>
           <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
-            @ Licences 3 Informatique, Université de Caen 2018
+            Licences 3 Informatique, Université de Caen 2018
           </Text>
-        </Slide>
+          <Text textSize="1em" textColor="yellow" margin="40px 0px 0px">
+            @Clebiez - clement.lebiez@gmail.com
+          </Text>
+         </Slide>
         <Slide bgColor="primary">
           <Appear fid="1">
             <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
@@ -112,17 +102,15 @@ export default class Presentation extends Component {
             </Heading>
           </Appear>
           <Appear fid="2">
-            <Text size={1} fit caps lineHeight={1} textColor="white" margin="50px 0" bold>
+            <Text size={1} fit caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
               Lead Front End Developer
             </Text>
           </Appear>
           <Appear fid="3">
-            <Text size={1} fit caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
-              Auto entrepreneur
-            </Text>
+            <Image src={gifs.logoYousign.replace('/', '')} />
           </Appear>
         </Slide>
-        <Slide bgColor="red">
+        <Slide bgColor="primary">
           <Appear fid="1">
             <Heading size={1} fit caps lineHeight={1} textColor="white" bold>
               DUT Informatique
@@ -159,94 +147,174 @@ export default class Presentation extends Component {
             </Heading>
           </Appear>
         </Slide>
-        <Slide bgColor="primary">
-          <Text fit lineHeight={1} textColor="white" caps bold>
-            Un Client c'est quelqu'un qui...
-          </Text>
-          <List textColor="white" bold caps>
-            <Appear fid="1">
-              <ListItem>ne sait pas dev.</ListItem>
-            </Appear>
-            <Appear fid="2">
-              <ListItem  textColor="yellow">te paye.</ListItem>
-            </Appear>
-            <Appear fid="3">
-              <ListItem>s'attend à un résultat.</ListItem>
-            </Appear>
-            <Appear fid="4">
-              <ListItem  textColor="yellow">a très peur que ça foire.</ListItem>
-            </Appear>
-          </List>
-        </Slide>
-        <Slide bgColor="red">
-          <Text fit lineHeight={1} textColor="white" caps bold>
-            Un Chef de projet c'est quelqu'un qui...
-          </Text>
-          <List textColor="white" bold caps>
-            <Appear fid="1">
-              <ListItem>ne sait pas dev.</ListItem>
-            </Appear>
-            <Appear fid="2">
-              <ListItem  textColor="yellow">te paye.</ListItem>
-            </Appear>
-            <Appear fid="3">
-              <ListItem>s'attend à un résultat.</ListItem>
-            </Appear>
-            <Appear fid="4">
-              <ListItem  textColor="yellow">a très peur que ça foire.</ListItem>
-            </Appear>
-          </List>
-        </Slide>
         <Slide
           bgImage={gifs.team.replace('/', '')}
           bgDarken={0.2}
         >
           <Appear fid="1">
-            <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
+            <Heading size={1} fit caps lineHeight={1} textColor="white" bold>
               Tu as une équipe.
             </Heading>
           </Appear>
         </Slide>
+        <Slide bgColor="primary">
+          <Text textColor="white" caps bold fill margin="30px">Project Manager</Text>
+          <Text textColor="yellow" caps bold fill margin="30px">UI/UX Designer</Text>
+          <Text textColor="white" caps bold fill margin="30px">Back end developer</Text>
+          <Text textColor="yellow" caps bold fill margin="30px">Front end developer</Text>
+          <Text textColor="white" caps bold fill margin="30px">Commerciaux</Text>
+          <Text textColor="yellow" caps bold fill margin="30px">Support Tech</Text>
+        </Slide>
         <Slide bgColor="red">
           <Heading fit caps>
-            Lancement d'un projet
+            Lancement d'un projet / d'une feature
+          </Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading fit caps>
+            Préparation Technique
+          </Heading>
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading fit caps>
+            Développement
           </Heading>
         </Slide>
         <Slide
+          bgImage={gifs.developer.replace('/', '')}
+        />
+        <Slide
           bgImage={gifs.speak.replace('/', '')}/>
-        <Slide bgColor="primary">
-          <Heading fit caps>
-            Architecture
+        <Slide bgColor="yellow">
+          <Heading fit caps textColor="primary">
+            Débriefing
           </Heading>
+        </Slide>
+        <Slide bgColor="yellow">
+          <Heading size={3} textColor="primary" bold caps>
+            Préparation Technique
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="red" bold caps>
+                  Comprendre le besoin
+              </ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="primary" bold caps>
+                  Choisir une solution technique
+              </ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="red" bold caps>
+                  Recherche & Développement
+              </ListItem>
+            </Appear>
+          </List>
+          <Appear fid="4">
+              <Heading textColor="secondary" fill bold caps>
+                  Anéantir les incertitudes
+              </Heading>
+            </Appear>
+        </Slide>
+        <Slide bgColor="white">
+          <Image display="block" src={gifs.umlUseCase.replace('/', '')} />>
+        </Slide>
+        <Slide bgImage={gifs.proto.replace('/', '')} bgDarken="0.3">
           <Appear fid="1">
-            <Heading textColor="yellow" caps>
-              Star du projet
+            <Heading textColor="white" fit caps bold>
+              Prototyping
             </Heading>
           </Appear>
         </Slide>
-        <Slide
-          bgImage={gifs.speak.replace('/', '')}/>
-        <Slide bgColor="secondary">
-          <Heading fit caps>
-            Développement du lot 1
-          </Heading>
+        <Slide bgColor="white">
+          <Image display="block" src={gifs.proto2.replace('/', '')} />
         </Slide>
-        <Slide
-          bgImage={gifs.speak.replace('/', '')}/>
-        <Slide bgColor="secondary">
-          <Heading fit caps>
-            Développement du lot 2
+        <Slide bgColor="primary">
+          <Heading size={3} textColor="white" bold caps>
+            Intérêt du prototype
           </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem caps bold textColor="yellow">Impliquer le client dès le début</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="white" caps bold>Valider le besoin</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="yellow" caps bold>Valider la vision du produit</ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem caps bold textColor="white">Prémices de design</ListItem>
+            </Appear>
+          </List>
         </Slide>
-        <Slide
-          bgImage={gifs.speak.replace('/', '')}/>
-        <Slide bgColor="secondary">
-          <Heading fit caps>
-            Développement du lot 3
+        <Slide>
+          <Link textColor="white" bold caps href="google.com">Exemple d'un prototype</Link>
+        </Slide>
+        <Slide bgImage={gifs.brainstorming.replace('/', '')}
+          bgDarken="0.4"
+        >
+          <Appear fid="1">
+            <Heading textColor="white">
+              Brainstorming
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={3} textColor="white" bold caps>
+            Intérêt du Brainstorming
           </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="yellow" bold caps>
+                  Tu
+              </ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="white" bold caps>
+                  As
+              </ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="yellow" bold caps>
+                  UNE
+              </ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem textColor="white" bold caps>
+                  équipe !
+              </ListItem>
+            </Appear>
+          </List>
         </Slide>
-        <Slide
-          bgImage={gifs.speak.replace('/', '')}/>
+        <Slide>
+          <Heading size={3} fit caps textColor="orange">
+            Qualité d'un bon développeur
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Fait de la veille</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="yellow" bold caps>Sait vulgariser</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="white" bold caps>Sait se remettre en question</ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem textColor="yellow" bold caps>Est passionné</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
+            @Clebiez - clement.lebiez@gmail.com
+          </Heading>
+          <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
+            Licences 3 Informatique, Université de Caen 2018
+          </Text>
+        </Slide>
       </Deck>
     );
   }
