@@ -126,21 +126,6 @@ export default class Presentation extends Component {
           </Appear>
         </Slide>
         <Slide bgColor="primary">
-          <Heading size={3} caps lineHeight={1} textColor="orange" bold>
-            Auto entrepreneur
-          </Heading>
-          <Appear fid="1">
-            <Text size={1} caps lineHeight={1} textColor="yellow" margin="50px 0" bold>
-              Conférencier
-            </Text>
-          </Appear>
-          <Appear fid="1">
-            <Text size={1} fill caps lineHeight={1} textColor="white" margin="50px 0" bold>
-              Passionné d'entrepreunariat
-            </Text>
-          </Appear>
-        </Slide>
-        <Slide bgColor="primary">
           <Appear fid="1">
             <Heading size={1} fit caps lineHeight={1} textColor="white" bold>
               DUT Informatique
