@@ -277,7 +277,7 @@ export default class Presentation extends Component {
           </List>
         </Slide>
         <Slide>
-          <Link textColor="white" bold caps href="google.com">Exemple d'un prototype</Link>
+          <Link textColor="white" bold caps href="https://marvelapp.com/5e5i9jf" target="_blank">Exemple d'un prototype</Link>
         </Slide>
         <Slide bgImage={gifs.brainstorming.replace('/', '')}
           bgDarken="0.4"
