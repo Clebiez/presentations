@@ -34,7 +34,6 @@ import preloader from '../../../src/utils/preloader';
 
 import createTheme from '../../../src/themes/default';
 
-import Interactive from '../assets/interactive';
 
 require('normalize.css');
 
@@ -55,11 +54,12 @@ const gifs = {
 preloader(gifs);
 
 const theme = createTheme({
-  primary: '#00695c',
-  secondary: '#0d47a1',
+  primary: '#1E6583',
+  secondary: '#516457',
+  green: '#B2DBBF',
+  greenDark: '#70C1B3',
   red: '#b71c1c',
-  orange: '#ffb74d',
-  yellow: '#fff176'
+  yellow: '#F3FFBD'
 });
 
 export default class Presentation extends Component {
@@ -87,7 +87,7 @@ export default class Presentation extends Component {
         transitionDuration={500}
       >
         <Slide bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
+          <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
             C'est quoi un développeur ?
           </Heading>
           <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
@@ -98,7 +98,7 @@ export default class Presentation extends Component {
           </Text>
          </Slide>
         <Slide bgColor="primary">
-          <Heading size={1} fill caps lineHeight={1} textColor="orange" bold>
+          <Heading size={1} fill caps lineHeight={1} textColor="yellow" bold>
             Clément Le Biez
           </Heading>
           <Appear fid="1">
@@ -111,7 +111,7 @@ export default class Presentation extends Component {
           </Appear>
         </Slide>
         <Slide bgColor="primary">
-          <Heading size={3} caps lineHeight={1} textColor="orange" bold>
+          <Heading size={3} caps lineHeight={1} textColor="yellow" bold>
             Auto entrepreneur
           </Heading>
           <Appear fid="1">
@@ -164,7 +164,7 @@ export default class Presentation extends Component {
         </Slide>
         <Slide>
           <Appear fid="1">
-            <Heading size={3} textColor="orange">
+            <Heading size={3} textColor="yellow">
               40% de Développement
             </Heading>
           </Appear>
@@ -218,7 +218,7 @@ export default class Presentation extends Component {
         <Slide
           bgImage={gifs.speak.replace('/', '')}/>
         <Slide bgColor="primary">
-          <Heading size={3} textColor="orange" bold caps>
+          <Heading size={3} textColor="yellow" bold caps>
             Préparation Technique
           </Heading>
           <List>
@@ -239,7 +239,7 @@ export default class Presentation extends Component {
             </Appear>
           </List>
           <Appear fid="4">
-              <Heading size={4} textColor="orange" fill bold caps>
+              <Heading size={4} textColor="yellow" fill bold caps>
                   Anéantir les incertitudes
               </Heading>
             </Appear>
@@ -322,7 +322,7 @@ export default class Presentation extends Component {
           </List>
         </Slide>
         <Slide>
-          <Heading size={3} fit caps textColor="orange">
+          <Heading size={3} fit caps textColor="yellow">
             Qualités d'un bon développeur
           </Heading>
           <List>
@@ -341,7 +341,7 @@ export default class Presentation extends Component {
           </List>
         </Slide>
         <Slide bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="orange" bold>
+          <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
             @Clebiez - clement.lebiez@gmail.com
           </Heading>
           <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
