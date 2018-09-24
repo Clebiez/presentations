@@ -38,18 +38,8 @@ import createTheme from '../../../src/themes/default';
 require('normalize.css');
 
 const gifs = {
-  developer: require('../assets/developer.gif'),
-  team: require('../assets/team.gif'),
-  alone: require('../assets/alone.gif'),
-  speak: require('../assets/speak.gif'),
-  what: require('../assets/what.gif'),
-  proto: require('../assets/proto.jpg'),
-  proto2: require('../assets/proto2.jpg'),
-  umlUseCase: require('../assets/umlUseCase.png'),
-  logoYousign: require('../assets/logoYousign.png'),
-  brainstorming: require('../assets/brainstorming.jpg'),
-  kanban: require('../assets/kanban.jpg'),
-  kanban2: require('../assets/kanban2.png'),
+  projectManager: require('../assets/chefProjet.jpg'),
+  allClients: require('../assets/allClients.jpg')
 };
 preloader(gifs);
 
@@ -88,7 +78,7 @@ export default class Presentation extends Component {
       >
         <Slide bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
-            C'est quoi un chef de projet ?
+            La conduite d'un projet
           </Heading>
           <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
             Licences 3 Informatique, Université de Caen 2018
@@ -97,30 +87,87 @@ export default class Presentation extends Component {
             @Clebiez - clement.lebiez@gmail.com
           </Text>
          </Slide>
-        <Slide
-          bgImage={gifs.speak.replace('/', '')}/>
         <Slide>
-          <Heading size={3} fit caps textColor="yellow">
-            Qualités d'un bon chef de projet
+          <Heading size={3} caps textColor="yellow">
+            Vous voilà chef de projet !
           </Heading>
           <List>
             <Appear fid="1">
-              <ListItem textColor="white" bold caps>Sait gérer la pression</ListItem>
+              <ListItem textColor="white" bold caps>Vous avez des devs</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="yellow" bold caps>Sait vulgariser</ListItem>
+              <ListItem textColor="yellow" bold caps>Vous avez un client</ListItem>
             </Appear>
             <Appear fid="3">
-              <ListItem textColor="white" bold caps>Sait faire des compromis</ListItem>
-            </Appear>
-            <Appear fid="4">
-              <ListItem textColor="yellow" bold caps>A de bonnes connaissances techniques</ListItem>
+              <ListItem textColor="white" bold caps>Et vous avez une tâche "simple"</ListItem>
             </Appear>
           </List>
         </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Mener à bien ce projet.
+          </Heading>
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={gifs.projectManager.replace('/', '')} width="900"/>
+        </Slide>
+        <Slide>
+          <List>
+            <ListItem textColor="white" bold caps>Comprendre le contexte</ListItem>
+            <Appear fid="2">
+              <ListItem textColor="yellow" bold caps>Définir le cadre</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="white" bold caps>Organiser la réussite du projet</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Premier rendez-vous avec votre client.
+          </Heading>
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={gifs.allClients.replace('/', '')} height="100%"/>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Comprendre le besoin
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Les objectifs (perso, pro)</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="yellow" bold caps>Ce à quoi il s'attend ?</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="white" bold caps>Comment mesurer ? (KPI)</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Comprendre le besoin
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Est-ce clair ?</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="yellow" bold caps>Est-ce réalisable ?</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="white" bold caps>Déterminer les key features</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Text textColor="white" bold caps>Une key feature est une fonctionnalité qui est essentielle au projet.</Text>
+        </Slide>
         <Slide bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
-            @Clebiez - clement.lebiez@gmail.com
+            clement.lebiez@gmail.com
           </Heading>
           <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
             Licences 3 Informatique, Université de Caen 2018
@@ -130,17 +177,3 @@ export default class Presentation extends Component {
     );
   }
 }
-
-// Différence Client VS Chef de projet V
-
-// Architecture
-
-// L'argent, ça rend accroc
-
-// Pédagogie
-
-// Déroulement du projet
-
-// Finalité
-
-// Résumé
