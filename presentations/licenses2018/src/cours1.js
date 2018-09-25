@@ -54,7 +54,7 @@ const gifs = {
 preloader(gifs);
 
 const theme = createTheme({
-  primary: '#1E6583',
+  primary: '#144155',
   secondary: '#516457',
   green: '#B2DBBF',
   greenDark: '#70C1B3',
@@ -176,7 +176,6 @@ export default class Presentation extends Component {
         </Slide>
         <Slide
           bgImage={gifs.team.replace('/', '')}
-          bgDarken={0.2}
         >
           <Appear fid="1">
             <Heading size={1} fit caps lineHeight={1} textColor="white" bold>
@@ -192,17 +191,17 @@ export default class Presentation extends Component {
           <Text textColor="white" caps bold fill margin="30px">Commerciaux</Text>
           <Text textColor="yellow" caps bold fill margin="30px">Support Tech</Text>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide>
           <Heading fit caps>
             Lancement d'un projet / d'une feature
           </Heading>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide>
           <Heading fit caps>
             Préparation Technique
           </Heading>
         </Slide>
-        <Slide bgColor="secondary">
+        <Slide>
           <Heading fit caps>
             Développement
           </Heading>
@@ -210,14 +209,19 @@ export default class Presentation extends Component {
         <Slide
           bgImage={gifs.developer.replace('/', '')}
         />
-        <Slide bgColor="primary">
+        <Slide>
           <Heading fit caps textColor="white">
             Débriefing
           </Heading>
         </Slide>
         <Slide
           bgImage={gifs.speak.replace('/', '')}/>
-        <Slide bgColor="primary">
+        <Slide>
+          <Heading fit caps textColor="yellow">
+            Rétrospective
+          </Heading>
+        </Slide>
+        <Slide>
           <Heading size={3} textColor="yellow" bold caps>
             Préparation Technique
           </Heading>
@@ -257,7 +261,7 @@ export default class Presentation extends Component {
         <Slide bgColor="white">
           <Image display="block" src={gifs.proto2.replace('/', '')} />
         </Slide>
-        <Slide bgColor="primary">
+        <Slide>
           <Heading size={3} textColor="white" bold caps>
             Intérêt du prototype
           </Heading>
@@ -340,7 +344,7 @@ export default class Presentation extends Component {
             </Appear>
           </List>
         </Slide>
-        <Slide bgColor="primary">
+        <Slide>
           <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
             @Clebiez - clement.lebiez@gmail.com
           </Heading>
