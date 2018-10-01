@@ -91,7 +91,7 @@ export default class Presentation extends Component {
             C'est quoi un développeur ?
           </Heading>
           <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
-            Licences 3 Informatique, Université de Caen 2018
+            Licence 3 Informatique, Université de Caen 2018
           </Text>
           <Text textSize="1em" textColor="yellow" margin="40px 0px 0px">
             @Clebiez - clement.lebiez@gmail.com

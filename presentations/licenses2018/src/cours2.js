@@ -39,7 +39,10 @@ require('normalize.css');
 
 const gifs = {
   projectManager: require('../assets/chefProjet.jpg'),
-  allClients: require('../assets/allClients.jpg')
+  allClients: require('../assets/allClients.jpg'),
+  gantt: require('../assets/gantt.png'),
+  mvp: require('../assets/mvp.png'),
+  leanStartup: require('../assets/lean-startup.jpg')
 };
 preloader(gifs);
 
@@ -155,15 +158,208 @@ export default class Presentation extends Component {
               <ListItem textColor="white" bold caps>Est-ce clair ?</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="yellow" bold caps>Est-ce réalisable ?</ListItem>
+              <ListItem textColor="white" bold caps>Quelles informations manquent t'il ?</ListItem>
             </Appear>
             <Appear fid="3">
+              <ListItem textColor="yellow" bold caps>Est-ce réalisable ? Et le timing ?</ListItem>
+            </Appear>
+            <Appear fid="4">
               <ListItem textColor="white" bold caps>Déterminer les key features</ListItem>
             </Appear>
           </List>
         </Slide>
         <Slide>
           <Text textColor="white" bold caps>Une key feature est une fonctionnalité qui est essentielle au projet.</Text>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Comprendre le besoin
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Cahier des charges VS Agilité</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="white" bold caps>Spécifications fonctionelles de bases</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="yellow" bold caps>Règle du 80-20</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <List>
+            <ListItem textColor="white" bold caps>Comprendre le contexte</ListItem>
+            <ListItem textColor="yellow" bold caps>Définir le cadre</ListItem>
+            <ListItem textColor="white" bold caps>Organiser la réussite du projet</ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Définir le cadre du projet
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Définition claire et écrite du projet</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="white" bold caps>Contexte, objectifs, solutions envisagés</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="yellow" bold caps>Faire valider avec le client</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Définir le cadre du projet
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Planning prévisionnel et jalons</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="white" bold caps>Diagramme de Gantt !</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="yellow" bold caps>Faire valider avec le client</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={gifs.gantt.replace('/', '')} width="100%"/>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Définir le cadre du projet
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>ne JAMAIS tout développer d'un bloc</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="white" bold caps>Définir un temps total max acceptable puis définir les jalons</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="yellow" bold caps>Valider le premier jalon et le planning global avec le client</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Text textColor="white" bold caps>Pour estimer le temps de réalisation d'une tâche, demandez à vos développeurs.</Text>
+          <Text textColor="yellow" bold caps>Multipliez ce temps par 2 et ajoutez 10% en plus.</Text>
+          <Text textColor="white" italic caps>(imprévu, A/R, demande d'arbitrage qui prenne du temps)</Text>
+        </Slide>
+        <Slide>
+          <Text textColor="yellow" bold caps>Exemple, si une tâche est estimé à 10H, alors comptez 22.</Text>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Réalisation
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Prototype</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="white" bold caps>Trello</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="yellow" bold caps>Slack</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            LEAN Startup
+          </Heading>
+        </Slide>
+        <Slide>
+          <Text textColor="white" caps>Une Startup est une entreprise destiné à délivrer un nouveau produit ou un nouveau service dans des conditions d'extrêmes incertitudes.</Text>
+          <Appear fid="1">
+            <Text textColor="yellow" caps bold>Rien à voir avec la taille de l'entreprise.</Text>
+          </Appear>
+        </Slide>
+        <Slide>
+          <Heading size={2} textColor="white" bold caps>une entreprise qui tente.</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Objectifs
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Mieux exploiter la créativité humaine</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="white" bold caps>Arrêter le gaspillage</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="yellow" bold caps>Apporter un produit le plus vite possible aux clients</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Objectifs
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Mieux exploiter la créativité humaine</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="yellow" bold caps>Arrêter le gaspillage</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="white" bold caps>Apporter un produit le plus vite possible aux clients</ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem textColor="yellow" bold caps>Amélioration continue</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={gifs.leanStartup.replace('/', '')} height="100%"/>
+        </Slide>
+        <Slide>
+          <Heading size={3} textColor="yellow">
+            Construire
+          </Heading>
+          <Text textColor="white">Un MVP (Minimal Viable Product) est une stratégie de développement de produit, utilisée pour de rapides et quantitatifs tests de mise sur le marché d'un produit ou d'une fonctionnalité.</Text>
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={gifs.mvp.replace('/', '')} width="100%"/>
+        </Slide>
+        <Slide>
+          <Heading size={3} textColor="yellow">
+            Mesurer
+          </Heading>
+          <Text textColor="white">Aller sur le terrain pour mesurer de manière quantifiable les retours de vos clients OU de potentiels clients.</Text>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Mesurer
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Test en condition réel</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="yellow" bold caps>Questionnaire</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="white" bold caps>Vidéo de présentation</ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem textColor="yellow" bold caps>Landing Page</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={3} textColor="yellow">
+            Apprendre
+          </Heading>
+          <Text textColor="white">Lorsqu'une startup change de produit pour répondre à un nouveau besoin identifié, on dit qu'elle a effectué un « Pivot ».</Text>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>

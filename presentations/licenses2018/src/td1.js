@@ -99,11 +99,19 @@ export default class Presentation extends Component {
         <Slide bgColor="primary">
           <List textColor="yellow" bold caps>
             <ListItem margin="20px 0">Reprendre le backlog fait avec Jean-Luc</ListItem>
-            <ListItem margin="20px 0">Définir des chemins utilisateurs</ListItem>
+            <ListItem margin="20px 0">Définir des parcours utilisateurs</ListItem>
             <ListItem margin="20px 0">Faire des croquis PAPIER des vues</ListItem>
             <ListItem margin="20px 0">Relier les vues entre elle avec Marvel</ListItem>
             <ListItem margin="20px 0">Et faire valider à votre client (moi)</ListItem>
           </List>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
+            clement.lebiez@gmail.com
+          </Heading>
+          <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
+            Licences 3 Informatique, Université de Caen 2018
+          </Text>
         </Slide>
       </Deck>
     );

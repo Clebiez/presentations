@@ -107,6 +107,14 @@ export default class Presentation extends Component {
             <ListItem margin="20px 0">Et faire valider à votre chef de projet (moi)</ListItem>
           </List>
         </Slide>
+        <Slide bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
+            clement.lebiez@gmail.com
+          </Heading>
+          <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
+            Licences 3 Informatique, Université de Caen 2018
+          </Text>
+        </Slide>
       </Deck>
     );
   }
