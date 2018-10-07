@@ -102,8 +102,8 @@ export default class Presentation extends Component {
           <List textColor="yellow" bold caps>
             <ListItem margin="20px 0">Créer un compte sur Trello</ListItem>
             <ListItem margin="20px 0">Reprendre le backlog fait avec Jean-Luc</ListItem>
-            <ListItem margin="20px 0">Lister chaque User Story par lot</ListItem>
-            <ListItem margin="20px 0">Expliquer de manière la plus claire comment réaliser chaque User Story</ListItem>
+            <ListItem margin="20px 0">Lister chaque User Stories</ListItem>
+            <ListItem margin="20px 0">Expliquer de manière la plus claire comment réaliser chaque User Stories</ListItem>
             <ListItem margin="20px 0">Et faire valider à votre chef de projet (moi)</ListItem>
           </List>
         </Slide>

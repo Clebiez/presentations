@@ -292,22 +292,6 @@ export default class Presentation extends Component {
               <ListItem textColor="white" bold caps>Mieux exploiter la créativité humaine</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="white" bold caps>Arrêter le gaspillage</ListItem>
-            </Appear>
-            <Appear fid="3">
-              <ListItem textColor="yellow" bold caps>Apporter un produit le plus vite possible aux clients</ListItem>
-            </Appear>
-          </List>
-        </Slide>
-        <Slide>
-          <Heading size={3} caps textColor="yellow">
-            Objectifs
-          </Heading>
-          <List>
-            <Appear fid="1">
-              <ListItem textColor="white" bold caps>Mieux exploiter la créativité humaine</ListItem>
-            </Appear>
-            <Appear fid="2">
               <ListItem textColor="yellow" bold caps>Arrêter le gaspillage</ListItem>
             </Appear>
             <Appear fid="3">
@@ -329,6 +313,9 @@ export default class Presentation extends Component {
         </Slide>
         <Slide bgColor="white">
           <Image src={gifs.mvp.replace('/', '')} width="100%"/>
+        </Slide>
+        <Slide>
+          <Text textColor="white">La Fourchette, Groupon</Text>
         </Slide>
         <Slide>
           <Heading size={3} textColor="yellow">
@@ -356,10 +343,10 @@ export default class Presentation extends Component {
           </List>
         </Slide>
         <Slide>
-          <Heading size={3} textColor="yellow">
-            Apprendre
-          </Heading>
           <Text textColor="white">Lorsqu'une startup change de produit pour répondre à un nouveau besoin identifié, on dit qu'elle a effectué un « Pivot ».</Text>
+        </Slide>
+        <Slide>
+          <Text textColor="white">Nokia, Flickr & Slack, Twitch</Text>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
