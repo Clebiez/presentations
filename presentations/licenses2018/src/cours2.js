@@ -42,7 +42,13 @@ const gifs = {
   allClients: require('../assets/allClients.jpg'),
   gantt: require('../assets/gantt.png'),
   mvp: require('../assets/mvp.png'),
-  leanStartup: require('../assets/lean-startup.jpg')
+  leanStartup: require('../assets/lean-startup.jpg'),
+  alone: require('../assets/alone 2.gif'),
+  goodfastcheap: require('../assets/goodfastcheap.gif'),
+  pivot: require('../assets/pivot.gif'),
+  team: require('../assets/team.gif'),
+  toomuchscience: require('../assets/toomuchscience.gif'),
+  rejected: require('../assets/rejected.gif')
 };
 preloader(gifs);
 
@@ -84,7 +90,7 @@ export default class Presentation extends Component {
             La conduite d'un projet
           </Heading>
           <Text textSize="1.0em" textColor="white" margin="40px 0px 0px">
-            Licences 3 Informatique, Université de Caen 2018
+            Licence 3 Informatique, Université de Caen 2018
           </Text>
           <Text textSize="1em" textColor="yellow" margin="40px 0px 0px">
             @Clebiez - clement.lebiez@gmail.com
@@ -112,6 +118,9 @@ export default class Presentation extends Component {
           </Heading>
         </Slide>
         <Slide bgColor="white">
+          <Image src={gifs.team.replace('/', '')} width="900"/>
+        </Slide>
+        <Slide bgColor="white">
           <Image src={gifs.projectManager.replace('/', '')} width="900"/>
         </Slide>
         <Slide>
@@ -132,6 +141,9 @@ export default class Presentation extends Component {
         </Slide>
         <Slide bgColor="white">
           <Image src={gifs.allClients.replace('/', '')} height="100%"/>
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={gifs.goodfastcheap.replace('/', '')} height="100%"/>
         </Slide>
         <Slide>
           <Heading size={3} caps textColor="yellow">
@@ -158,19 +170,20 @@ export default class Presentation extends Component {
               <ListItem textColor="white" bold caps>Est-ce clair ?</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="white" bold caps>Quelles informations manquent t'il ?</ListItem>
+              <ListItem textColor="yellow" bold caps>Quelles informations manquent t'il ?</ListItem>
             </Appear>
             <Appear fid="3">
-              <ListItem textColor="yellow" bold caps>Est-ce réalisable ? Et le timing ?</ListItem>
+              <ListItem textColor="white" bold caps>Est-ce réalisable ? Et le timing ?</ListItem>
             </Appear>
             <Appear fid="4">
-              <ListItem textColor="white" bold caps>Déterminer les key features</ListItem>
+              <ListItem textColor="yellow" bold caps>Déterminer les key features</ListItem>
             </Appear>
           </List>
         </Slide>
         <Slide>
           <Text textColor="white" bold caps>Une key feature est une fonctionnalité qui est essentielle au projet.</Text>
         </Slide>
+        <Slide bgImage={gifs.toomuchscience.replace('/', '')} />
         <Slide>
           <Heading size={3} caps textColor="yellow">
             Comprendre le besoin
@@ -180,18 +193,11 @@ export default class Presentation extends Component {
               <ListItem textColor="white" bold caps>Cahier des charges VS Agilité</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="white" bold caps>Spécifications fonctionelles de bases</ListItem>
+              <ListItem textColor="yellow" bold caps>Spécifications fonctionelles de base</ListItem>
             </Appear>
             <Appear fid="3">
-              <ListItem textColor="yellow" bold caps>Règle du 80-20</ListItem>
+              <ListItem textColor="white" bold caps>Règle du 80-20</ListItem>
             </Appear>
-          </List>
-        </Slide>
-        <Slide>
-          <List>
-            <ListItem textColor="white" bold caps>Comprendre le contexte</ListItem>
-            <ListItem textColor="yellow" bold caps>Définir le cadre</ListItem>
-            <ListItem textColor="white" bold caps>Organiser la réussite du projet</ListItem>
           </List>
         </Slide>
         <Slide>
@@ -203,10 +209,10 @@ export default class Presentation extends Component {
               <ListItem textColor="white" bold caps>Définition claire et écrite du projet</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="white" bold caps>Contexte, objectifs, solutions envisagés</ListItem>
+              <ListItem textColor="yellow" bold caps>Contexte, objectifs, solutions envisagés</ListItem>
             </Appear>
             <Appear fid="3">
-              <ListItem textColor="yellow" bold caps>Faire valider avec le client</ListItem>
+              <ListItem textColor="white" bold caps>Faire valider avec le client</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -219,10 +225,10 @@ export default class Presentation extends Component {
               <ListItem textColor="white" bold caps>Planning prévisionnel et jalons</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="white" bold caps>Diagramme de Gantt !</ListItem>
+              <ListItem textColor="yellow" bold caps>Diagramme de Gantt !</ListItem>
             </Appear>
             <Appear fid="3">
-              <ListItem textColor="yellow" bold caps>Faire valider avec le client</ListItem>
+              <ListItem textColor="white" bold caps>Faire valider avec le client</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -238,10 +244,10 @@ export default class Presentation extends Component {
               <ListItem textColor="white" bold caps>ne JAMAIS tout développer d'un bloc</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="white" bold caps>Définir un temps total max acceptable puis définir les jalons</ListItem>
+              <ListItem textColor="yellow" bold caps>Définir un temps total max acceptable puis définir les jalons</ListItem>
             </Appear>
             <Appear fid="3">
-              <ListItem textColor="yellow" bold caps>Valider le premier jalon et le planning global avec le client</ListItem>
+              <ListItem textColor="white" bold caps>Valider le premier jalon et le planning global avec le client</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -251,7 +257,7 @@ export default class Presentation extends Component {
           <Text textColor="white" italic caps>(imprévu, A/R, demande d'arbitrage qui prenne du temps)</Text>
         </Slide>
         <Slide>
-          <Text textColor="yellow" bold caps>Exemple, si une tâche est estimé à 10H, alors comptez 22.</Text>
+          <Text textColor="yellow" bold caps>Exemple, si une tâche est estimée à 10H, alors comptez 22.</Text>
         </Slide>
         <Slide>
           <Heading size={3} caps textColor="yellow">
@@ -262,10 +268,10 @@ export default class Presentation extends Component {
               <ListItem textColor="white" bold caps>Prototype</ListItem>
             </Appear>
             <Appear fid="2">
-              <ListItem textColor="white" bold caps>Trello</ListItem>
+              <ListItem textColor="yellow" bold caps>Trello</ListItem>
             </Appear>
             <Appear fid="3">
-              <ListItem textColor="yellow" bold caps>Slack</ListItem>
+              <ListItem textColor="white" bold caps>Slack</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -305,6 +311,7 @@ export default class Presentation extends Component {
         <Slide bgColor="white">
           <Image src={gifs.leanStartup.replace('/', '')} height="100%"/>
         </Slide>
+        <Slide bgImage={gifs.pivot.replace('/', '')} />
         <Slide>
           <Heading size={3} textColor="yellow">
             Construire
@@ -322,6 +329,9 @@ export default class Presentation extends Component {
             Mesurer
           </Heading>
           <Text textColor="white">Aller sur le terrain pour mesurer de manière quantifiable les retours de vos clients OU de potentiels clients.</Text>
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={gifs.alone.replace('/', '')} width="70%"/>
         </Slide>
         <Slide>
           <Heading size={3} caps textColor="yellow">
@@ -347,6 +357,31 @@ export default class Presentation extends Component {
         </Slide>
         <Slide>
           <Text textColor="white">Nokia, Flickr & Slack, Twitch</Text>
+        </Slide>
+        <Slide>
+          <Heading size={3} caps textColor="yellow">
+            Go !
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem textColor="white" bold caps>Marketting</ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem textColor="yellow" bold caps>Marketting</ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem textColor="white" bold caps>Marketting</ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem textColor="yellow" bold caps>Marketting</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide bgColor="white">
+          <Image src={gifs.alone.replace('/', '')} width="70%"/>
+        </Slide>
+        <Slide>
+          <Text textColor="white">On dit que pour réussir, il faut au moins dépenser 2 fois plus en marketting qu'en développement.</Text>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="yellow" bold>
